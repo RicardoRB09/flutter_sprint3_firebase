@@ -30,9 +30,9 @@ class ChatController extends GetxController {
     AuthenticationController authenticationController = Get.find();
 
     String chatKey = getChatKey(authenticationController.getUid(), uidUser);
-
     // TODO
     // newEntryStreamSubscription = databaseReference - child msg - child chatKey - listen
+    // newEntryStreamSubscription = databaseReference.child('msg').child(chatKey).;
 
     // TODO
     //  updateEntryStreamSubscription = databaseReference - child msg - child chatKey - listen
@@ -42,6 +42,8 @@ class ChatController extends GetxController {
   void unsubscribe() {
     //TODO
     // cancelar las subscripciones a los streams
+    newEntryStreamSubscription.cancel();
+    updateEntryStreamSubscription.cancel();
   }
 
   // este método es llamado cuando se tiene una nueva entrada
@@ -91,8 +93,9 @@ class ChatController extends GetxController {
     String key = getChatKey(authenticationController.getUid(), remoteUserUid);
     String senderUid = authenticationController.getUid();
     try {
-      // TODO
+      // TODO - OK
       // databaseReference - child('msg') - child(key) - push() - set({'senderUid': senderUid, 'msg': msg})
+      createChat(senderUid, remoteUserUid, senderUid, msg);
     } catch (error) {
       logError(error);
       return Future.error(error);

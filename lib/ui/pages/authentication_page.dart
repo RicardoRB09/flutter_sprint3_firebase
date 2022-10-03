@@ -12,9 +12,9 @@ class AuthenticationPage extends StatelessWidget {
 
   void signIn() async {
     // aquí creamos los tres usuarios
-    await authenticationController.signup('a@a.com', '123456');
-    await authenticationController.signup('b@b.com', '123456');
-    await authenticationController.signup('c@c.com', '123456');
+    await authenticationController.signup('a@misiontic.com', '123456');
+    await authenticationController.signup('b@misiontic.com', '123456');
+    await authenticationController.signup('c@misiontic.com', '123456');
   }
 
   void login(String user) {

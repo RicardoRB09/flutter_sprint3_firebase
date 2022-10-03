@@ -17,20 +17,21 @@ Future<void> main() async {
     ),
   );
   // Aquí nos conectamos a los servicios de firebase
-  // await Firebase.initializeApp(
-  //   options: const FirebaseOptions(
-  //     apiKey: Configuration.apiKey,
-  //     authDomain: Configuration.authDomain,
-  //     databaseURL: Configuration.databaseURL,
-  //     projectId: Configuration.projectId,
-  //     storageBucket: Configuration.storageBucket,
-  //     messagingSenderId: Configuration.messagingSenderId,
-  //     appId: Configuration.appId,
-  //     measurementId: Configuration.measurementId,
-  //   ),
-  // );
+  await Firebase.initializeApp(
+    name: 'Group7chat',
+    options: const FirebaseOptions(
+      apiKey: Configuration.apiKey,
+      authDomain: Configuration.authDomain,
+      databaseURL: Configuration.databaseURL,
+      projectId: Configuration.projectId,
+      storageBucket: Configuration.storageBucket,
+      messagingSenderId: Configuration.messagingSenderId,
+      appId: Configuration.appId,
+      measurementId: Configuration.measurementId,
+    ),
+  );
 
-  await Firebase.initializeApp();
+  // await Firebase.initializeApp();
 
   //Se inyectan los controladores
   Get.put(AuthenticationController());
