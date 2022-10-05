@@ -11,10 +11,14 @@ class AuthenticationPage extends StatelessWidget {
   final AuthenticationController authenticationController = Get.find();
 
   void signIn() async {
-    // aquí creamos los tres usuarios
-    await authenticationController.signup('a@misiontic.com', '123456');
-    await authenticationController.signup('b@misiontic.com', '123456');
-    await authenticationController.signup('c@misiontic.com', '123456');
+    try {
+      // aquí creamos los tres usuarios
+      await authenticationController.signup('a@a.com', '123456');
+      await authenticationController.signup('b@b.com', '123456');
+      await authenticationController.signup('c@c.com', '123456');
+    } catch (e) {
+      print('usuarios existen');
+    }
   }
 
   void login(String user) {
@@ -25,7 +29,19 @@ class AuthenticationPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Chat App - Autenticación")),
+      appBar: AppBar(
+        leading: const Padding(
+          padding: EdgeInsets.only(left: 7.0),
+          child: Image(
+            image: AssetImage('assets/images/icon.png'),
+          ),
+        ),
+        title: const Text(
+          "MinTiChat - Autenticación",
+          style: TextStyle(fontSize: 18),
+        ),
+        centerTitle: true,
+      ),
       body: SafeArea(
         child: Center(
           child: Column(

@@ -32,10 +32,19 @@ class ChatController extends GetxController {
     String chatKey = getChatKey(authenticationController.getUid(), uidUser);
     // TODO
     // newEntryStreamSubscription = databaseReference - child msg - child chatKey - listen
-    // newEntryStreamSubscription = databaseReference.child('msg').child(chatKey).;
+    newEntryStreamSubscription = databaseReference
+        .child('msg')
+        .child(chatKey)
+        .onChildAdded
+        .listen((event) => _onEntryAdded(event));
 
     // TODO
     //  updateEntryStreamSubscription = databaseReference - child msg - child chatKey - listen
+    updateEntryStreamSubscription = databaseReference
+        .child('msg')
+        .child(chatKey)
+        .onChildChanged
+        .listen((event) => _onEntryChanged(event));
   }
 
   // método en el que cerramos los streams
@@ -95,7 +104,11 @@ class ChatController extends GetxController {
     try {
       // TODO - OK
       // databaseReference - child('msg') - child(key) - push() - set({'senderUid': senderUid, 'msg': msg})
-      createChat(senderUid, remoteUserUid, senderUid, msg);
+      databaseReference
+          .child('msg')
+          .child(key)
+          .push()
+          .set({'senderUid': senderUid, 'msg': msg});
     } catch (error) {
       logError(error);
       return Future.error(error);

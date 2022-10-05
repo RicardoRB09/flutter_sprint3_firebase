@@ -57,7 +57,9 @@ class _ChatPageState extends State<ChatPage> {
     return Card(
       margin: const EdgeInsets.all(4.0),
       // cambiamos el color dependiendo de quién mandó el usuario
-      color: uid == element.senderUid ? Colors.yellow[200] : Colors.grey[300],
+      color: uid == element.senderUid
+          ? Colors.indigo.shade50
+          : Colors.grey.shade100,
       child: ListTile(
         title: Text(
           element.msg,
@@ -115,7 +117,11 @@ class _ChatPageState extends State<ChatPage> {
         ),
         TextButton(
             key: const Key('sendButton'),
-            child: const Text('Send'),
+            child: Icon(
+              Icons.send_rounded,
+              size: 26,
+              color: Colors.indigo.shade500,
+            ),
             onPressed: () {
               _sendMsg(_controller.text);
               _controller.clear();

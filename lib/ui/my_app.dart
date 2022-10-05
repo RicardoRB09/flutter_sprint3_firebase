@@ -16,9 +16,12 @@ class MyApp extends StatelessWidget {
 
     return GetMaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'Firebase demo',
+        title: 'MinTiChat',
         theme: ThemeData(
-          primarySwatch: Colors.blue,
+          appBarTheme: const AppBarTheme(
+            color: Color.fromRGBO(30, 38, 73, 1),
+          ),
+          scaffoldBackgroundColor: Colors.white,
         ),
         home: const FirebaseCentral());
   }
