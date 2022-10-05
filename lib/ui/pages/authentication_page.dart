@@ -10,14 +10,17 @@ class AuthenticationPage extends StatelessWidget {
   AuthenticationPage({Key? key}) : super(key: key);
   final AuthenticationController authenticationController = Get.find();
 
+  List<String> usuarios = ["a@a.com", "b@b.com", "c@c.com"];
+  String contrasenaComun = "123456";
+
   void signIn() async {
-    try {
-      // aquí creamos los tres usuarios
-      await authenticationController.signup('a@a.com', '123456');
-      await authenticationController.signup('b@b.com', '123456');
-      await authenticationController.signup('c@c.com', '123456');
-    } catch (e) {
-      print('usuarios existen');
+    for (var usuario in usuarios) {
+      try {
+        // aquí creamos los tres usuarios
+        await authenticationController.signup(usuario, contrasenaComun);
+      } catch (e) {
+        print('usuarios existen');
+      }
     }
   }
 
@@ -88,13 +91,13 @@ class AuthenticationPage extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
                             ElevatedButton(
-                                onPressed: () => login('a@a.com'),
+                                onPressed: () => login(usuarios[0]),
                                 child: const Text("Ingresar con usuario A")),
                             ElevatedButton(
-                                onPressed: () => login('b@b.com'),
+                                onPressed: () => login(usuarios[1]),
                                 child: const Text("Ingresar con usuario B")),
                             ElevatedButton(
-                                onPressed: () => login('c@c.com'),
+                                onPressed: () => login(usuarios[2]),
                                 child: const Text("Ingresar con usuario C")),
                           ]),
                     ),
