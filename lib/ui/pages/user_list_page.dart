@@ -86,7 +86,24 @@ class _UserListPageState extends State<UserListPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Chat App ${authenticationController.userEmail()}"),
+          leading: Padding(
+            padding: EdgeInsets.all(8.0),
+            child: CircleAvatar(
+              backgroundColor: Colors.white,
+              child: Text(
+                'A',
+                // authenticationController.userEmail() == 'A' ? 'A' : authenticationController.userEmail() == 'B' ? 'B' : authenticationController.userEmail() == 'C' : 'A',
+                style: TextStyle(
+                  fontSize: 30,
+                  color: Color.fromRGBO(30, 38, 73, 1),
+                ),
+              ),
+            ),
+          ),
+          title: Text(
+            " ${authenticationController.userEmail()}",
+            style: TextStyle(fontSize: 16),
+          ),
           actions: [
             // botón para crear unos chats para arrancar el demo
             IconButton(
