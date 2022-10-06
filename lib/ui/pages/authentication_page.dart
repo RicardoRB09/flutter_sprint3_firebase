@@ -17,7 +17,7 @@ class AuthenticationPage extends StatelessWidget {
       await authenticationController.signup('user_b@mintinc.edu.co', '123456');
       await authenticationController.signup('user_c@mintinc.edu.co', '123456');
     } catch (e) {
-      print('usuarios existen');
+      authenticationController.usersCreated.value = true;
     }
   }
 
@@ -45,79 +45,78 @@ class AuthenticationPage extends StatelessWidget {
       body: SafeArea(
         child: Center(
           child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Padding(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: Colors.indigo.shade100,
+                      borderRadius:
+                          const BorderRadius.all(Radius.circular(10))),
+                  child: Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            primary: const Color.fromRGBO(30, 38, 73, 1),
+                          ),
+                          onPressed: signIn,
+                          child: const Text("Crear los tres usuarios"),
+                        ),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text(
+                          'Antes de crear los usuarios, borrar todos los usuarios del sistema de autenticación y la base de datos de tiempo real de firebase',
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 14,
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+              ),
+              Expanded(
+                child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Container(
+                    width: double.infinity,
                     decoration: BoxDecoration(
                         color: Colors.indigo.shade100,
                         borderRadius:
                             const BorderRadius.all(Radius.circular(10))),
                     child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: ElevatedButton(
+                        ElevatedButton(
                             style: ElevatedButton.styleFrom(
-                              backgroundColor: Color.fromRGBO(30, 38, 73, 1),
+                              primary: const Color.fromRGBO(30, 38, 73, 1),
                             ),
-                            onPressed: signIn,
-                            child: const Text("Crear los tres usuarios"),
-                          ),
-                        ),
-                        const Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text(
-                            'Antes de crear los usuarios, borrar todos los usuarios del sistema de autenticación y la base de datos de tiempo real de firebase',
-                            style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 14,
+                            onPressed: () => login('user_a@mintinc.edu.co'),
+                            child: const Text("Ingresar con usuario A")),
+                        ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              primary: const Color.fromRGBO(30, 38, 73, 1),
                             ),
-                          ),
-                        )
+                            onPressed: () => login('user_b@mintinc.edu.co'),
+                            child: const Text("Ingresar con usuario B")),
+                        ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              primary: const Color.fromRGBO(30, 38, 73, 1),
+                            ),
+                            onPressed: () => login('user_c@mintinc.edu.co'),
+                            child: const Text("Ingresar con usuario C")),
                       ],
                     ),
                   ),
                 ),
-                Expanded(
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Container(
-                      width: double.infinity,
-                      decoration: BoxDecoration(
-                          color: Colors.indigo.shade100,
-                          borderRadius:
-                              const BorderRadius.all(Radius.circular(10))),
-                      child: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          children: [
-                            ElevatedButton(
-                                style: ElevatedButton.styleFrom(
-                                  backgroundColor:
-                                      Color.fromRGBO(30, 38, 73, 1),
-                                ),
-                                onPressed: () => login('user_a@mintinc.edu.co'),
-                                child: const Text("Ingresar con usuario A")),
-                            ElevatedButton(
-                                style: ElevatedButton.styleFrom(
-                                  backgroundColor:
-                                      Color.fromRGBO(30, 38, 73, 1),
-                                ),
-                                onPressed: () => login('user_a@mintinc.edu.co'),
-                                child: const Text("Ingresar con usuario B")),
-                            ElevatedButton(
-                                style: ElevatedButton.styleFrom(
-                                  backgroundColor:
-                                      Color.fromRGBO(30, 38, 73, 1),
-                                ),
-                                onPressed: () => login('user_a@mintinc.edu.co'),
-                                child: const Text("Ingresar con usuario C")),
-                          ]),
-                    ),
-                  ),
-                ),
-              ]),
+              ),
+            ],
+          ),
         ),
       ),
     );

@@ -6,6 +6,7 @@ import 'user_controller.dart';
 // este controlador esconde los detalles de la implementación de firebase
 class AuthenticationController extends GetxController {
   final databaseReference = FirebaseDatabase.instance.ref();
+  RxBool usersCreated = false.obs;
 
   // método usado para logearse en la aplicación
   Future<void> login(email, password) async {

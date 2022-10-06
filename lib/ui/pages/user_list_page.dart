@@ -87,13 +87,18 @@ class _UserListPageState extends State<UserListPage> {
     return Scaffold(
         appBar: AppBar(
           leading: Padding(
-            padding: EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(8.0),
             child: CircleAvatar(
               backgroundColor: Colors.white,
               child: Text(
-                'A',
-                // authenticationController.userEmail() == 'A' ? 'A' : authenticationController.userEmail() == 'B' ? 'B' : authenticationController.userEmail() == 'C' : 'A',
-                style: TextStyle(
+                authenticationController
+                    .userEmail()
+                    .split('')
+                    .reversed
+                    .join()
+                    .split('@')[1][0]
+                    .toUpperCase(),
+                style: const TextStyle(
                   fontSize: 30,
                   color: Color.fromRGBO(30, 38, 73, 1),
                 ),
@@ -102,7 +107,7 @@ class _UserListPageState extends State<UserListPage> {
           ),
           title: Text(
             " ${authenticationController.userEmail()}",
-            style: TextStyle(fontSize: 16),
+            style: const TextStyle(fontSize: 16),
           ),
           actions: [
             // botón para crear unos chats para arrancar el demo
