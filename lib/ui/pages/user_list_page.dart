@@ -47,8 +47,13 @@ class _UserListPageState extends State<UserListPage> {
     // Widget usado en la lista de los usuarios
     // mostramos el correo y uid
     return Card(
-      margin: const EdgeInsets.all(4.0),
+      margin: const EdgeInsets.all(8.0),
       child: ListTile(
+        tileColor: Colors.indigo.shade50,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(10),
+          // side: BorderSide(color: Colors.black),
+        ),
         onTap: () {
           Get.to(() => const ChatPage(), arguments: [
             element.uid,
@@ -57,6 +62,9 @@ class _UserListPageState extends State<UserListPage> {
         },
         title: Text(
           element.email,
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+          ),
         ),
         subtitle: Text(element.uid),
       ),
@@ -107,7 +115,7 @@ class _UserListPageState extends State<UserListPage> {
           ),
           title: Text(
             " ${authenticationController.userEmail()}",
-            style: const TextStyle(fontSize: 16),
+            style: const TextStyle(fontSize: 18),
           ),
           actions: [
             // botón para crear unos chats para arrancar el demo
