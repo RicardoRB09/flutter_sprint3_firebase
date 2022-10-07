@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "654368615243",
+    "project_id": "cycle4bsprint3",
+    "storage_bucket": "cycle4bsprint3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:654368615243:android:96facb70b7409a405f56ce",
+        "android_client_info": {
+          "package_name": "com.sprint3.flutter_sprint3_firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "654368615243-jdalkqnrj8vttlllf4knhg7dhn2s13h7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1EYg_zTf4Bi72EVacx4lk3nH00R-aNnc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "654368615243-jdalkqnrj8vttlllf4knhg7dhn2s13h7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -60,20 +60,28 @@ class AuthenticationPage extends StatelessWidget {
                         padding: const EdgeInsets.all(8.0),
                         child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
-                            primary: const Color.fromRGBO(30, 38, 73, 1),
+                            backgroundColor:
+                                const Color.fromRGBO(30, 38, 73, 1),
                           ),
                           onPressed: signIn,
                           child: const Text("Crear los tres usuarios"),
                         ),
                       ),
-                      const Padding(
+                      Padding(
                         padding: EdgeInsets.all(8.0),
-                        child: Text(
-                          'Antes de crear los usuarios, borrar todos los usuarios del sistema de autenticación y la base de datos de tiempo real de firebase',
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 14,
-                          ),
+                        child: Row(
+                          children: const [
+                            Expanded(
+                              child: Text(
+                                'Para poder crear los usuarios, borrar todos los usuarios del sistema de autenticación y la base de datos de tiempo real de firebase.',
+                                style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 14,
+                                ),
+                                textAlign: TextAlign.justify,
+                              ),
+                            ),
+                          ],
                         ),
                       )
                     ],
@@ -94,19 +102,22 @@ class AuthenticationPage extends StatelessWidget {
                       children: [
                         ElevatedButton(
                             style: ElevatedButton.styleFrom(
-                              primary: const Color.fromRGBO(30, 38, 73, 1),
+                              backgroundColor:
+                                  const Color.fromRGBO(30, 38, 73, 1),
                             ),
                             onPressed: () => login('user_a@mintinc.edu.co'),
                             child: const Text("Ingresar con usuario A")),
                         ElevatedButton(
                             style: ElevatedButton.styleFrom(
-                              primary: const Color.fromRGBO(30, 38, 73, 1),
+                              backgroundColor:
+                                  const Color.fromRGBO(30, 38, 73, 1),
                             ),
                             onPressed: () => login('user_b@mintinc.edu.co'),
                             child: const Text("Ingresar con usuario B")),
                         ElevatedButton(
                             style: ElevatedButton.styleFrom(
-                              primary: const Color.fromRGBO(30, 38, 73, 1),
+                              backgroundColor:
+                                  const Color.fromRGBO(30, 38, 73, 1),
                             ),
                             onPressed: () => login('user_c@mintinc.edu.co'),
                             child: const Text("Ingresar con usuario C")),

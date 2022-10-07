@@ -139,11 +139,21 @@ class _ChatPageState extends State<ChatPage> {
   Widget build(BuildContext context) {
     WidgetsBinding.instance.addPostFrameCallback((_) => _scrollToEnd());
     return Scaffold(
-        appBar: AppBar(title: Text("Chat with $remoteEmail")),
+        appBar: AppBar(
+            title: Text(
+          "Chat with: $remoteEmail",
+          style: const TextStyle(fontSize: 16),
+        )),
         body: Padding(
           padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 25.0),
           child: Column(
-            children: [Expanded(flex: 4, child: _list()), _textInput()],
+            children: [
+              Expanded(
+                flex: 4,
+                child: _list(),
+              ),
+              _textInput(),
+            ],
           ),
         ));
   }

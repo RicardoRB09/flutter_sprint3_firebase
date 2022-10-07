@@ -62,7 +62,7 @@ class _UserListPageState extends State<UserListPage> {
         },
         title: Text(
           element.email,
-          style: TextStyle(
+          style: const TextStyle(
             fontWeight: FontWeight.bold,
           ),
         ),
@@ -115,7 +115,7 @@ class _UserListPageState extends State<UserListPage> {
           ),
           title: Text(
             " ${authenticationController.userEmail()}",
-            style: const TextStyle(fontSize: 18),
+            style: const TextStyle(fontSize: 16),
           ),
           actions: [
             // botón para crear unos chats para arrancar el demo
