@@ -4,7 +4,7 @@ Con base a lo solicitado para este tercer reto, se presenta la solución desarro
 <<PENDIENTE>>
 
 De igual forma, se puede ver el video explicativo en el siguiente enlace:
-<<PENDIENTE>>
+https://uninorte-my.sharepoint.com/:v:/g/personal/jjarmella_uninorte_edu_co/EfzRwcj9vEtFiRzMbj7buaUBLqZMnkeRsVQtMuYlUavhzQ
 
 
 
