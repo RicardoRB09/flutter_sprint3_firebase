@@ -6,8 +6,8 @@ Con base a lo solicitado para este tercer reto, se presenta la solución desarro
 De igual forma, se puede ver el video explicativo en el siguiente enlace:
 https://uninorte-my.sharepoint.com/:v:/g/personal/jjarmella_uninorte_edu_co/EfzRwcj9vEtFiRzMbj7buaUBLqZMnkeRsVQtMuYlUavhzQ
 
-![Sprint 3 Grupo 7](https://user-images.githubusercontent.com/109091254/194463375-091d50a9-cc09-4b26-9dc5-a280e1d51edf.gif width="300")
-
+<img src="https://user-images.githubusercontent.com/109091254/194463375-091d50a9-cc09-4b26-9dc5-a280e1d51edf.gif" width="300" />
+  
 
 
 
