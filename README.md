@@ -4,7 +4,8 @@ Con base a lo solicitado para este tercer reto, se presenta la solución desarro
 <img src="https://user-images.githubusercontent.com/109091254/194463375-091d50a9-cc09-4b26-9dc5-a280e1d51edf.gif" width="300" />
   
 De igual forma, se puede ver el video explicativo en el siguiente enlace:
-https://uninorte-my.sharepoint.com/:v:/g/personal/jjarmella_uninorte_edu_co/EfzRwcj9vEtFiRzMbj7buaUBLqZMnkeRsVQtMuYlUavhzQ
+
+https://uninorte-my.sharepoint.com/personal/jjarmella_uninorte_edu_co/_layouts/15/stream.aspx?id=%2Fpersonal%2Fjjarmella%5Funinorte%5Fedu%5Fco%2FDocuments%2FGrabaciones%2FCiclo%204b%20%2D%20Reto%204%20Equipo%207%2D20221012%5F210327%2DGrabaci%C3%B3n%20de%20la%20reuni%C3%B3n%2Emp4&ga=1&OR=Teams-HL&CT=1665628815975&clickparams=eyJBcHBOYW1lIjoiVGVhbXMtRGVza3RvcCIsIkFwcFZlcnNpb24iOiIyNy8yMjA5MDQwMDcxMiIsIkhhc0ZlZGVyYXRlZFVzZXIiOmZhbHNlfQ%3D%3D
 
 
   
