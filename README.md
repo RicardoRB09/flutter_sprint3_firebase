@@ -1,7 +1,9 @@
-# ==> Solución al Reto # 3 <==
+# ==> Solución al Reto # 4 <==
 Con base a lo solicitado para este tercer reto, se presenta la solución desarrollada por los miembros del Grupo 7 de MisionTIC NRC2147. El repo se puede clonar en la sección correspondiente y a continuación se puede visualizar la vista de la app final; así mismo, en la parte inferior se puede detallar la descripción propuesta para el mismo. 
 
 <img src="https://user-images.githubusercontent.com/109091254/194463375-091d50a9-cc09-4b26-9dc5-a280e1d51edf.gif" width="300" />
+
+
   
 De igual forma, se puede ver el video explicativo en el siguiente enlace:
 
